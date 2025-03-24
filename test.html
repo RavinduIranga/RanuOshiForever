@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Action Button</title>
+    <style>
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <a id="fab" class="fab">&#9742;</a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var fab = document.getElementById("fab");
+
+            if (/Mobi|Android/i.test(navigator.userAgent)) {
+                fab.href = "tel:+1234567890"; // Replace with your phone number
+            } else {
+                fab.href = "contactus.html";
+            }
+        });
+    </script>
+
+</body>
+</html>
